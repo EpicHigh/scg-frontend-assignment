@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap');
+
+body {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2022;
+  background-image: linear-gradient(0deg, rgba(55, 125, 255, 0.05) 0%, transparent 100%);
+  background-repeat: repeat-x;
+}
+
 .App {
   text-align: center;
 }
@@ -7,16 +19,147 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.border {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.non-flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 1rem;
+}
+
+.non-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: lightcoral;
+  font-size: 4rem !important;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.flip-card-back {
+  color: lightcoral;
+  font-size: 4rem !important;
+  font-weight: bold;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.bottom-border {
+  box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+  border-bottom: 1px solid #e7eaf3;
+}
+
+@keyframes filter {
+  0% {
+    filter: hue-rotate(360deg) sepia(0) grayscale(0);
+  }
+  50% {
+    filter: hue-rotate(0) sepia(100%) grayscale(50%);
+  }
+  100%{
+    filter: hue-rotate(360deg) sepia(0) grayscale(0);
+  }
+}
+
+.list-group .list-group-item {
+  font-size: 0.875rem;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}
+
+.u-avatar {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.card-header {
+  background-color: transparent;
+}
+
+.profile-media {
+  width: 8rem;
+  height: 8rem;
+}
+
+.social-media {
+  width: 2rem;
+  height: 2rem;
+}
+
+.odd {
+  background-color: #f8fafd
+}
+
+.vh-75 {
+  height: 75vh;
 }

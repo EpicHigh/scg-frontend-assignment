@@ -1,0 +1,42 @@
+{
+    "defaultSeverity": "error",
+    "rules": {
+        "max-classes-per-file": {
+            "options": [2]
+        },
+        "no-default-export": true,
+        "restrict-plus-operands": true,
+        "strict-boolean-expressions": true,
+        "jsx-ban-elements": true,
+        "jsx-ban-props": true,
+        "jsx-equals-spacing": "always",
+        "jsx-key": true,
+        "jsx-use-translation-function": false,
+        "jsx-self-close": true,
+        "jsx-space-before-trailing-slash": true,
+        "quotemark": [true, "single", "avoid-escape", "avoid-template", "jsx-double"],
+        "semicolon": false,
+        "no-submodule-imports": false,
+        "no-unused-variable": true,
+        "jsx-no-lambda": false,
+        "jsx-no-multiline-js": false
+    },
+    "extends": [
+        "tslint:latest",
+        "tslint-clean-code",
+        "tslint-consistent-codestyle",
+        "tslint-react"
+    ],
+    "rulesDirectory": [
+        "node_modules/tslint-clean-code",
+        "node_modules/tslint-consistent-codestyle",
+        "node_modules/tslint-react"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "config/**/*.js",
+            "node_modules/**/*.ts",
+            "coverage/lcov-report/*.js"
+        ]
+    }
+}
